@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import PropTypes from 'prop-types'; // Import PropTypes for prop validation
 import WeatherInfo from './WeatherInfo'; // Adjust the path if necessary
 import './weatherInfo_css.scss'; // Make sure to update the path if necessary
 
-const WeatherSearch = ({ onClose }) => { // Ensure onClose is destructured correctly
+const WeatherSearch = ({ onClose }) => {
   const [location, setLocation] = useState('');
 
   const handleLocationChange = (e) => {
@@ -32,6 +33,11 @@ const WeatherSearch = ({ onClose }) => { // Ensure onClose is destructured corre
       </div>
     </div>
   );
+};
+
+// Add prop types validation
+WeatherSearch.propTypes = {
+  onClose: PropTypes.func.isRequired, // Validate onClose as a required function
 };
 
 export default WeatherSearch;

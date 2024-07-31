@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types'; // Import PropTypes for prop validation
 import axios from 'axios';
 import './weatherInfo_css.scss';
 
@@ -19,7 +20,6 @@ const WeatherInfo = ({ location }) => {
 
   return (
     <div className="weather-info">
-      
       {weather ? (
         <div className="weather-info__details">
           <h3>{weather.name}</h3>
@@ -32,6 +32,11 @@ const WeatherInfo = ({ location }) => {
       )}
     </div>
   );
+};
+
+// Add prop types validation
+WeatherInfo.propTypes = {
+  location: PropTypes.string.isRequired,
 };
 
 export default WeatherInfo;

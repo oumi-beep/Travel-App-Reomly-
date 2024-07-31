@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import "./body_css.css";
 import video from "./image/video.mp4";
 import { GrLocation } from "react-icons/gr";

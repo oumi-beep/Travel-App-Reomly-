@@ -1,4 +1,4 @@
-import {React,useState}  from "react";
+import {useState}  from "react";
 import "./Popular_css.scss";
 
 import { BsArrowLeftShort } from "react-icons/bs";

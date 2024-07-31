@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import "./offer_css.scss";
 import { MdKingBed, MdPool, MdBathtub, MdLocalParking, MdLocationPin } from "react-icons/md";
 import { FaWifi } from "react-icons/fa";

@@ -1,4 +1,3 @@
-import React from "react";
 import "./about_css.scss"; // Make sure you have your styles defined in this file
 
 // Import images

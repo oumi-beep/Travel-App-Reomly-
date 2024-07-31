@@ -1,12 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types'; // Import PropTypes for prop validation
 import './header_css.css';
 import logo from './image/logo.png';
 import { faBars, faTimes, faUser, faCog, faCalendarCheck, faCloud, faStar, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import AuthModal from './AuthModal';
-import WeatherSearch from './WeatherSearch'; // Adjust the import path as necessary
 
-function Head({ isModalOpen, openLoginModal, openSignupModal, closeModal, user, onLogin, onSignOut, showWeatherSearch }) {
+function Head({ isModalOpen, openLoginModal, closeModal, user, onLogin, onSignOut, showWeatherSearch }) {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = React.useState(false);
 
@@ -60,5 +60,18 @@ function Head({ isModalOpen, openLoginModal, openSignupModal, closeModal, user, 
     </>
   );
 }
+
+// Add prop types validation
+Head.propTypes = {
+  isModalOpen: PropTypes.bool.isRequired,
+  openLoginModal: PropTypes.func.isRequired,
+  closeModal: PropTypes.func.isRequired,
+  user: PropTypes.shape({
+    username: PropTypes.string.isRequired,
+  }),
+  onLogin: PropTypes.func.isRequired,
+  onSignOut: PropTypes.func.isRequired,
+  showWeatherSearch: PropTypes.func.isRequired,
+};
 
 export default Head;

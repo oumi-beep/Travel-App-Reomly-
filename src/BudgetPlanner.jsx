@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 
 const BudgetPlanner = () => {
   const [accommodationCost, setAccommodationCost] = useState(0);

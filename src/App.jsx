@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import Head from './Head.jsx';
 import Footer from './Footer.jsx';
 import Body from './Body.jsx';
@@ -10,17 +10,14 @@ import WeatherSearch from './WeatherSearch';
 
 const App = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isLogin, setIsLogin] = useState(true); // Toggle between login and sign-up modals
   const [user, setUser] = useState(null); // Store user info
   const [isWeatherSearchVisible, setIsWeatherSearchVisible] = useState(false); // Manage WeatherSearch visibility
 
   const openLoginModal = () => {
-    setIsLogin(true);
     setIsModalOpen(true);
   };
 
   const openSignupModal = () => {
-    setIsLogin(false);
     setIsModalOpen(true);
   };
 
@@ -54,7 +51,7 @@ const App = () => {
         user={user} 
         onLogin={handleLogin} 
         onSignOut={handleSignOut} 
-        showWeatherSearch={showWeatherSearch} // Pass the handler to Head
+        showWeatherSearch={showWeatherSearch}
       />
       <Body />
       <Popular />

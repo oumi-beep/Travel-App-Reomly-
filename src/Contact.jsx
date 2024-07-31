@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import emailjs from 'emailjs-com';
 import './contact_css.scss';
 
@@ -44,7 +44,7 @@ const Contact = () => {
       <div className="secContainer">
         <div className="secInfo">
           <h2 className="secTitle">Contact Us</h2>
-          <p>We'd love to hear from you! Whether you have a question about our services, pricing, or anything else, our team is ready to answer all your questions.</p>
+          <p>We&apos;d love to hear from you! Whether you have a question about our services, pricing, or anything else, our team is ready to answer all your questions.</p>
         </div>
 
         <div className="mainContent grid">

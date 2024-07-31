@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/Projet-travel-app/static/css/main.646e7a79.css",
+    "main.js": "/Projet-travel-app/static/js/main.d964028f.js",
+    "static/media/video.mp4": "/Projet-travel-app/static/media/video.5f82a4e6b87498a5d4ff.mp4",
+    "static/media/Chefchaouen.jpg": "/Projet-travel-app/static/media/Chefchaouen.e7e4fc0ec3598d328b17.jpg",
+    "static/media/img5.jpg": "/Projet-travel-app/static/media/img5.1934ee5072406e27b62a.jpg",
+    "static/media/Fes.jpg": "/Projet-travel-app/static/media/Fes.0da9957ee096669dfbe3.jpg",
+    "static/media/Casablanca.jpg": "/Projet-travel-app/static/media/Casablanca.e89d798de95d6aff46e0.jpg",
+    "static/media/Desert_Oasis.jpg": "/Projet-travel-app/static/media/Desert_Oasis.8d1c6b20414fd6c657e0.jpg",
+    "static/media/img2.jpg": "/Projet-travel-app/static/media/img2.8e26897539458cf552f6.jpg",
+    "static/media/Rabat.jpg": "/Projet-travel-app/static/media/Rabat.474b8beb89eca05cd113.jpg",
+    "static/media/Marrakech.jpg": "/Projet-travel-app/static/media/Marrakech.fb721dca826e5371b524.jpg",
+    "static/media/img4.jpg": "/Projet-travel-app/static/media/img4.5477bca4b49322da3bd7.jpg",
+    "static/media/img3.jpg": "/Projet-travel-app/static/media/img3.9cdaf0bd0e224b2f9a7e.jpg",
+    "static/media/logo.png": "/Projet-travel-app/static/media/logo.2f74b4e6f5f3e2ba74c9.png",
+    "static/media/Agadir.jpg": "/Projet-travel-app/static/media/Agadir.db22719a9259a5bfe3b3.jpg",
+    "static/media/img1.jpg": "/Projet-travel-app/static/media/img1.69d21dbd3c7a026a6c8c.jpg",
+    "static/media/team.jpg": "/Projet-travel-app/static/media/team.7603bc6d7dacf37ca845.jpg",
+    "static/media/mession.jpg": "/Projet-travel-app/static/media/mession.d5df3cf9bf4d15b26766.jpg",
+    "static/media/Tanger.jpg": "/Projet-travel-app/static/media/Tanger.4779c7e0d8685528b230.jpg",
+    "index.html": "/Projet-travel-app/index.html",
+    "main.646e7a79.css.map": "/Projet-travel-app/static/css/main.646e7a79.css.map",
+    "main.d964028f.js.map": "/Projet-travel-app/static/js/main.d964028f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.646e7a79.css",
+    "static/js/main.d964028f.js"
+  ]
+}

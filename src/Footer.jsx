@@ -1,4 +1,3 @@
-import React from 'react';
 import "./footer_css.css";
 import LogoTravelApp from "./image/logo.png";
 import { FaInstagram, FaFacebook, FaWhatsapp } from "react-icons/fa";
