@@ -1,0 +1,38 @@
+.app {
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+  .travel-tools {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.itinerary-builder, .weather-info, .budget-planner {
+  background-color: #f4f4f4;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+}
+
+input, select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 1rem;
+}

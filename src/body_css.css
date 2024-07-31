@@ -1,0 +1,405 @@
+/* Body Container Styles */
+.body-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Hide any overflow */
+}
+
+/* Home Content Styles */
+.homeContent {
+  position: absolute; /* Absolute positioning to overlay the video */
+  top: 20%; /* Adjust position from the top */
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  z-index: 1; /* Ensure content is above the video */
+  text-align: center;
+  padding: 20px;
+  color: #fff; /* Light text color */
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  border-radius: 12px; /* Rounded corners */
+  max-width: 90%; /* Prevents content from being too wide */
+  width: 800px; /* Fixed width for larger screens */
+  transition: top 0.5s ease-in-out; /* Smooth transition effect */
+}
+
+/* Title and Subtitle Styles */
+.textOiv {
+  margin-bottom: 20px;
+}
+
+.smallText {
+  font-size: 18px;
+  font-weight: 300;
+  color: #f5f5f5; /* Light text color */
+  text-transform: uppercase;
+}
+
+.homeTitle {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0;
+  color: #ff4081; /* Highlight color for the title */
+}
+
+/* Card Container Styles */
+.cardDiv {
+  background: #ffffff; /* White background for card */
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  margin-top: 20px; /* Space between title and card */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Input Fields Container */
+.inputFields {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1rem; /* Space between input fields and button */
+}
+
+/* Input Styles */
+.destinationInput,
+.dateInput,
+.priceInput {
+  margin: 0 1rem; /* Horizontal margin for spacing */
+}
+
+.destinationInput label,
+.dateInput label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #333; /* Dark text color */
+  text-align: left; /* Align text to the left */
+}
+
+.Input {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #f9f9f9;
+}
+
+.icon {
+  font-size: 20px;
+  color: #195f80;
+  margin-right: 10px;
+}
+
+.Input input {
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  flex: 1; 
+}
+
+.input input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 4px; 
+  background: #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.input input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #ff4081; /* Slider color */
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Price Label Styles */
+.label_total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 7px;
+}
+
+.label_total label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333; /* Adjust the color as needed */
+}
+
+.label_total .total {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000; /* Adjust the color as needed */
+}
+
+/* Button Styles */
+.searchButton {
+  background-color: #ff4081;
+  color: #fff;
+  padding: 10px 20px; 
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.searchButton:hover {
+  background-color: #e63973;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-icons .icon {
+  font-size: 24px;
+  color: #fff; /* Adjust the color as needed */
+  margin: 0 10px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.social-icons .icon:hover {
+  color: #ff4081;
+}
+
+/* Search Results Styles */
+.searchResult {
+  width: 100%; /* Full width of the container */
+  max-width: 600px; /* Set a max-width to make it smaller */
+  margin: 20px auto; /* Center horizontally and add some top margin */
+  padding: 15px; /* Reduce padding for a more compact look */
+  background: #ffffff; /* Background color for results */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center text */
+}
+
+.searchResult h2 {
+  font-size: 20px; /* Smaller font size for the title */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px; /* Reduced margin */
+}
+
+input[list="cities"] {
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* Video styling */
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Ensure the video is behind content */
+}
+
+/* Search content styling */
+.searchResultsContainer {
+  position: absolute; /* Absolute positioning to the right */
+  top: 12%; /* Align with homeContent */
+  width: 100%; /* Adjust width as needed */
+  height: 100%; /* Adjust height as needed */
+  z-index: 2; /* Ensure results are above the video */
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto; /* Enable scrolling for overflowing content */
+  border-radius: 12px; /* Rounded corners */
+}
+
+/* Result box styling */
+.searchResult {
+  background: #ffffff; /* White background for each result */
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  margin-bottom: 10px; /* Space between results */
+}
+
+/* Image styling within results */
+.offer-image {
+  width: 100%;
+  max-width: 170px; /* Limit the image width */
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Result title and details styling */
+.searchResult h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.searchResult p {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.amenities {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.amenity {
+  color: #195f80;
+  display: flex;
+  align-items: center;
+  margin: 5px;
+}
+
+.amenity span {
+  margin-left: 5px;
+  font-size: 12px;
+  color: #555;
+}
+
+/* Styles for the Close button */
+.closeResultsButton {
+  background-color: #ff4d4d; /* Red color */
+  color: white; /* White text */
+  border: none; /* Remove default border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 10px 20px; /* Padding */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor */
+  margin-bottom: 20px; /* Margin at the bottom */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+.closeResultsButton:hover {
+  background-color: #e60000; /* Darker red on hover */
+  transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+.closeResultsButton:focus {
+  outline: none; /* Remove outline on focus */
+}
+
+/* Styles for the Add to Favorite button */
+.favorite-button {
+  background-color: #ffcc00; /* Yellow color */
+  color: black; /* Black text */
+  border: none; /* Remove default border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 10px 20px; /* Padding */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor */
+  margin-right: 10px; /* Margin to the right */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+.favorite-button:hover {
+  background-color: #e5b800; /* Darker yellow on hover */
+  transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+.favorite-button:focus {
+  outline: none; /* Remove outline on focus */
+}
+
+/* Styles for the Booking button */
+.booking-button {
+  background-color: #195f80; /* Green color */
+  color: white; /* White text */
+  border: none; /* Remove default border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 10px 20px; /* Padding */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+.booking-button:hover {
+  background-color: #e63973; /* Darker green on hover */
+  transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+.booking-button:focus {
+  outline: none; /* Remove outline on focus */
+}
+
+/* Container for action buttons */
+.result-actions {
+  margin-top: 20px; /* Margin at the top */
+  display: flex; /* Flexbox for layout */
+  justify-content: center; /* Center buttons horizontally */
+  gap: 10px; /* Space between buttons */
+}
+
+/* Responsive Styles for Small Screens */
+@media (max-width: 768px) {
+  .homeContent {
+    width: 90%; /* Adjust width for smaller screens */
+    padding: 10px;
+    font-size: 14px; /* Reduce font size */
+    top: 10%; /* Adjust top position */
+  }
+
+  .homeTitle {
+    font-size: 28px; /* Adjust title font size */
+  }
+
+  .smallText {
+    font-size: 16px; /* Adjust small text size */
+  }
+
+  .cardDiv {
+    padding: 1rem; /* Adjust padding */
+  }
+
+  .searchButton,
+  .favorite-button,
+  .booking-button {
+    font-size: 14px; /* Adjust button font size */
+    padding: 8px 16px; /* Adjust button padding */
+  }
+
+  .searchResult {
+    max-width: 100%; /* Full width on smaller screens */
+    padding: 10px; /* Adjust padding */
+  }
+
+  .offer-image {
+    max-width: 150px; /* Adjust image width */
+  }
+
+  .inputFields {
+    flex-direction: column; /* Stack input fields vertically */
+    align-items: stretch; /* Stretch input fields */
+  }
+
+  .destinationInput,
+  .dateInput,
+  .priceInput {
+    margin: 0 0 1rem 0; /* Adjust margin for vertical stacking */
+  }
+
+  .searchResultsContainer {
+    top: 20%; /* Adjust top position */
+    width: 100%; /* Full width on smaller screens */
+    height: auto; /* Adjust height for better layout */
+  }
+}

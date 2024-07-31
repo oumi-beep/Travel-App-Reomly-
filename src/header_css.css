@@ -1,0 +1,281 @@
+/* Basic Header Styles */
+header {
+  background-color: #98acc1;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative; /* Ensures correct positioning of children */
+}
+
+.logo {
+  height: 60px;
+  width: 80px;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav-menu li {
+  font-size: 18px;
+  color: #343a40;
+  cursor: pointer;
+  margin: 0;
+  padding: 0 15px;
+}
+
+.nav-menu li:hover {
+  color: #ff4081;
+}
+
+.nav-menu .book-now a {
+  background-color: #ff4081;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-left: 10px;
+}
+
+.nav-menu .book-now a:hover {
+  background-color: #d81b60;
+}
+
+/* Menu Toggle Button Styles */
+.menu-toggle {
+  display: none;
+  background-color: #ff4081;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.menu-toggle:hover {
+  background-color: #d81b60;
+}
+
+/* Dropdown Container */
+.dropdown {
+  position: relative;
+  display: inline-block; /* Ensures that the dropdown is aligned correctly */
+}
+
+/* Dropdown Toggle Button */
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: #343a40;
+  font-weight: bold;
+}
+
+/* Profile Icon */
+.profile-icon {
+  font-size: 30px;
+  color: #195f80;
+  margin-right: 8px;
+}
+
+.username {
+  font-size: 20px;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown .dropdown-toggle {
+  display: flex;
+  align-items: center;
+  color: #333; /* Adjust as needed */
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #e0e0e0; /* Background color for toggle button */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown .dropdown-toggle:hover {
+  background-color: #d0d0d0; /* Darker background on hover */
+  color: #195f80; /* Text color change on hover */
+}
+
+.dropdown .profile-icon {
+  margin-right: 10px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown .dropdown-toggle {
+  display: flex;
+  align-items: center;
+  color: #333; /* Adjust as needed */
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown .dropdown-toggle:hover {
+  background-color: #f0f0f0; /* Adjust as needed */
+}
+
+.dropdown .profile-icon {
+  margin-right: 8px;
+}
+
+.dropdown .dropdown-menu {
+  position: absolute;
+  top: 120%;
+  right: 18px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  list-style: none;
+  margin: 0;
+  width: 250px;
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown .dropdown-menu.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown .dropdown-menu.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.dropdown .dropdown-menu li {
+  margin-bottom: 8px;
+}
+
+.dropdown .dropdown-menu li:last-child {
+  margin-bottom: 0;
+}
+
+.dropdown .dropdown-menu li a {
+  display: flex;
+  align-items: center;
+  color: #333; /* Adjust as needed */
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown .dropdown-menu li a:hover {
+  color: #ff4081; /* Adjust as needed */
+}
+
+.dropdown .dropdown-menu li a .fa-icon {
+  margin-right: 8px;
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none; /* Hide menu on small screens */
+  }
+
+  .menu-toggle {
+    display: block; /* Show menu toggle button */
+  }
+
+  .header-container {
+    justify-content: space-between; /* Keep logo and menu toggle button on either end */
+    align-items: center;
+  }
+
+  .nav-menu.visible {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust if needed */
+    right: 20px; /* Align with header padding */
+    background-color: #98acc1;
+    width: calc(100% - 40px); /* Adjust width to fit within padding */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure it is above other content */
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .nav-menu li {
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    height: 40px;
+  }
+
+  .nav-menu li {
+    font-size: 16px;
+  }
+
+  .nav-menu .book-now a {
+    padding: 10px 20px;
+  }
+}

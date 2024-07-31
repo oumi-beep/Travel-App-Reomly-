@@ -1,0 +1,130 @@
+.contact {
+  padding: 3rem 0;
+  
+
+  .secContainer {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+
+    .secInfo {
+      text-align: center;
+      margin-bottom: 3rem;
+
+      .secTitle {
+        font-size: 2.5rem;
+        color: #195f80;
+        font-family: 'Source Serif Pro', serif;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+        color: #555;
+        line-height: 1.6;
+      }
+    }
+
+    .mainContent {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3rem;
+
+      .contactDetails {
+        flex: 1;
+        min-width: 300px;
+        padding: 2rem;
+        background-color: #ffffff;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+
+        .detail {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          margin-bottom: 1.5rem;
+
+          .icon {
+            font-size: 2rem;
+            color: #2b2d42;
+          }
+
+          p {
+            font-size: 1.2rem;
+            color: #555;
+          }
+        }
+      }
+
+      .contactForm {
+        flex: 2;
+        max-width: 600px; // Controls the maximum width of the form
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 2rem;
+        background-color: #ffffff;
+        box-shadow: 0 4px 12px #195f80;
+        border-radius: 10px;
+        max-width: 600px;  // Controls the maximum width of the form
+        margin: auto;  // Centers the form horizontally
+
+        .formGroup {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+
+          label {
+            font-size: 1.1rem;
+            color: #195f80;
+            font-weight: bold;
+          }
+
+          input,
+          textarea {
+            
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+            background: #f5f7fa;
+
+            &:focus {
+              border-color: #ff4081;
+              outline: none;
+              background: #ffffff;
+              box-shadow: 0 0 5px #ff4081;
+            }
+          }
+        }
+
+        .btn {
+            align-self: center;
+            padding: 0.75rem 1.5rem; // Adjust padding for better button size
+            border: none;
+            background-color: #195f80;
+            color: #fff;
+            width: auto; // Allow width to be determined by padding and content
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+
+          &:hover {
+            background-color: #ff4081;
+            transform: translateY(-2px);
+          }
+
+          &:active {
+            transform: translateY(1px);
+          }
+        }
+      }
+    }
+  }
+}

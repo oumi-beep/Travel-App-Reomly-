@@ -1,0 +1,394 @@
+/*-----------------------------------*\
+  # Footer
+\*-----------------------------------*/
+.footer {
+  background-size: cover; /* Changed to cover for full coverage */
+  background-position: center; /* Center background image */
+  background-repeat: no-repeat;
+  font-family: Arial, sans-serif;
+  background-color: #c4d8ed;
+  position: relative; /* Ensure positioning context for absolute children */
+  overflow: hidden; /* Prevent overflow issues */
+}
+
+/* Ensure minimal spacing between <ul> elements */
+.footer-list {
+  margin: 0; /* No margin around the <ul> */
+  padding: 0; /* No padding inside the <ul> */
+  list-style-type: none; /* Remove bullet points */
+}
+
+/* Ensure spacing between list items */
+.footer-list li {
+  margin: 8px 0; /* Adjust vertical spacing between list items */
+}
+
+/* Optional: Adjust spacing within list items */
+.footer-list a {
+  display: block;
+  margin: 4px 0; /* Adjust vertical spacing between links */
+  text-decoration: none;
+}
+
+/* Optional: Adjust spacing between header and list items */
+.footer-list .headline-sm {
+  margin-bottom: 16px;
+  font-size: 30px;
+  margin-right: 3px; /* Adjust vertical spacing between consecutive lists */
+}
+
+.footer-top {
+  display: grid;
+  color: #195f80;
+  gap: 40px;
+  padding-bottom: 60px; /* Changed to padding-bottom for consistency */
+}
+
+.footer-brand {
+  background-color: #a0bede;
+  padding: 32px;
+  margin-top: 30px;
+  border-radius: 6px;
+  text-align: center; /* Center text and content */
+}
+
+.footer-brand .logo {
+  height: 120px; /* Adjusted for smaller screens */
+  display: flex;
+  justify-content: center; /* Centers the logo horizontally */
+  margin-bottom: 20px; /* Adjusted space between logo and contact list */
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.contact-item .item-icon {
+  font-size: 2rem;
+  color: #4A4A4A;
+}
+
+.contact-item .email_tele p {
+  color: #4A4A4A;
+  font-size:20px; /* Adjust font size for smaller screens */
+}
+
+.contact-list .contact-item .email_tele p a {
+  color: #195f80;
+  font-size: 17px;
+  text-decoration: none;
+}
+
+.contact-list .contact-item .email_tele p a:hover {
+  color: #ff4081;
+}
+
+.footer-link {
+  color: #195f80;
+  margin-top: 13px; /* Adjusted margin-top for spacing */
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.footer-link:hover {
+  color: #ff4081;
+}
+
+.footer-form .input-field {
+  color: #ce7a7a;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  padding: 12px 20px;
+  background: transparent;
+  border-bottom: 1.5px solid;
+  outline: none;
+  width: calc(100% - 60px); /* Adjusted to fit within parent */
+}
+
+.footer-form .input-field::placeholder {
+  color: #ff4081;
+}
+
+.footer-form .subscribe {
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px;
+  font-size: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 16px;
+  color: white;
+  width: calc(100% - 20px); /* Adjusted width */
+  background-color: #ff4081;
+  position: relative;
+}
+
+.footer-form .subscribe::before,
+.footer-form .subscribe::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  transition: transform 0.6s ease;
+  z-index: -1;
+}
+
+.footer-form .subscribe::before {
+  background-color: #a5df97;
+}
+
+.footer-form .subscribe:hover::before,
+.footer-form .subscribe:focus-visible::before {
+  transform: translateX(100%);
+}
+
+.footer-form button::after {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.footer-form button:hover::after,
+.footer-form button:focus-visible::after {
+  transform: translateX(100%);
+}
+
+.text {
+  font-size: 17px;
+  color: #4A4A4A;
+  margin-top: 10px;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px; 
+  color: #195f80;
+  border-top: 1px solid #195f80;
+}
+.footer-bottom .social {
+  display: flex;
+  gap: 10px; 
+  margin-top: 10px;
+}
+
+.footer-bottom .social .icon {
+  font-size: 1.5rem; 
+  color: #195f80;
+  transition: color 0.3s ease; 
+}
+
+.footer-bottom .social .icon:hover {
+  color: #ff4081; 
+}
+
+.footer-bottom .copyright {
+  margin-top: 10px; 
+  text-align: center; 
+  font-size: 14px; 
+}
+
+@media (max-width: 767px) {
+  .footer-top {
+    grid-template-columns: 1fr; /* Stacks sections vertically on small screens */
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  .footer-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .footer-list p.headline-sm {
+    font-size: 20px; /* Adjust font size for better readability */
+    margin-bottom: 15px; /* Space below title */
+  }
+
+  .footer-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Full width to fit the container */
+  }
+
+  .input-field {
+    width: 100%; /* Full width input field */
+    max-width: 300px; /* Limit maximum width */
+    margin-bottom: 10px; /* Space below the input field */
+  }
+
+  .subscribe {
+    width: 100%; 
+    max-width: 300px; 
+    padding: 10px; 
+    font-size: 20px; 
+    color: white;
+  }
+  
+  .footer-list .footer-link {
+    font-size: 15px; /* Adjust font size for better readability */
+    margin-top: 10px; /* Space above text */
+    width: 100%; /* Full width to fit container */
+    max-width: 300px; /* Limit maximum width */
+  }
+  .footer-list li {
+    margin: 8px 0; 
+  }
+
+  .footer-brand .logo {
+    height: 100px;
+    width: 10px; /* Fixed width for the logo */
+    display: flex;
+    justify-content: center; /* Centers the logo horizontally */
+    margin-bottom: 20px; /* Space below logo */
+  }
+
+  .contact-item {
+    flex-direction: column;
+    align-items: center; 
+  }
+
+  .contact-item .item-icon {
+    font-size: 3rem;
+  }
+
+  .contact-item .email_tele p {
+    font-size: 14px; 
+  }
+
+  .footer-form .input-field,
+  .footer-form .subscribe {
+    width: calc(100% - 40px); 
+  }
+  
+  .footer-brand {
+    padding: 18px; 
+    text-align: center;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+  }
+
+
+  .contact-list {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    padding: 0; 
+    margin: 0; 
+    list-style: none; 
+  }
+
+  .contact-item {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin-bottom: 20px; 
+  }
+
+  .contact-item .item-icon {
+    font-size: 3rem; 
+    margin-bottom: 10px; 
+  }
+
+  .contact-item .email_tele p {
+    font-size: 14px;
+    margin: 5px 0; 
+  }
+
+
+}
+
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 750px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-brand {
+    grid-column: 1 / 3;
+  }
+
+  .contact-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .footer-bottom {
+    display: flex;
+    flex-direction: row; /* Align items in a row on larger screens */
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-bottom .social-list {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 940px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+
+  .footer {
+    background-size: cover; /* Ensures the background covers the entire footer */
+  }
+
+  .footer-top {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .footer-brand {
+    grid-column: 1 / 5;
+    padding: 28px 56px;
+    display: grid;
+    grid-template-columns: 0.3fr 1fr;
+    align-items: center;
+  }
+
+  .footer .logo {
+    margin-bottom: 0;
+  }
+
+  .contact-list {
+    justify-content: space-between;
+  }
+
+  .contact-list::after {
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .contact-item {
+    margin-top: 0;
+  }
+}

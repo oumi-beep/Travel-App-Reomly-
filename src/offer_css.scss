@@ -1,0 +1,212 @@
+.offer {
+  padding: 2rem 0;
+
+  .secContainer {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+
+    .secInfo {
+      text-align: center;
+      margin-bottom: 2rem;
+
+      .secTitle {
+        font-size: 2rem;
+        color: #195f80;
+        font-family: 'Source Serif Pro', serif;
+        margin-bottom: 0.2rem;
+      }
+
+      p {
+        font-size: 1rem;
+        color: #555;
+      }
+    }
+
+    .mainContent {
+      position: relative;
+      
+      .offersGrid {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(1, 1fr);
+
+        @media (min-width: 768px) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (min-width: 1024px) {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .singleOffer {
+          background: #fff;
+          border-radius: 8px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          overflow: hidden;
+          transition: transform 0.3s;
+
+          &:hover {
+            transform: translateY(-10px);
+          }
+
+          .destImage {
+            position: relative;
+            margin-bottom: 0;
+
+            img {
+              width: 100%;
+              height: 300px;
+              margin-bottom: 0;
+              display: block;
+            }
+
+            .discount {
+              position: absolute;
+              top: 10px;
+              left: 10px;
+              background: #ff4081;
+              color: #fff;
+              padding: 5px 10px;
+              border-radius: 4px;
+              font-size: 0.875rem;
+            }
+          }
+
+          .offerBody {
+            padding: 1rem;
+            margin-top: -30px;
+
+            .price {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin-bottom: 1rem;
+
+              h4 {
+                font-size: 1.5rem;
+                color: #195f80;
+              }
+
+              .status {
+                display: inline-block;
+                padding: 10px 15px;
+                background-color: rgba(226, 223, 223, 0.527);
+                color: #ff4081;
+                font-size: 14px;
+                font-weight: 600;
+                text-align: center;
+                border-radius: 3rem;
+                box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.1);
+              }
+            }
+
+            .amenities {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 10px;
+              margin-top: -10px;
+              margin-bottom: 1rem;
+
+              .singleAmenity {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+
+                .icon {
+                  font-size: 1.25rem;
+                  color: #195f80;
+                }
+
+                small {
+                  font-size: 0.875rem;
+                  color: #555;
+                }
+              }
+            }
+
+            .location {
+              display: flex;
+              align-items: center;
+              margin-bottom: 1rem;
+
+              .icon {
+                font-size: 1.25rem;
+                color: #ff4081;
+                margin-right: 5px;
+              }
+
+              small {
+                font-size: 0.875rem;
+                color: #555;
+              }
+            }
+
+            .btn {
+              margin-top: auto;
+              float: right;
+              display: flex;
+              align-items: center;
+              margin-bottom: 8px;
+              background: #195f80;
+              color: #fff;
+              padding: 0.5rem 1rem;
+              border: none;
+              font-size: 0.9rem;
+              border-radius: 2rem;
+              cursor: pointer;
+              transition: background 0.3s;
+
+              .icon {
+                color: #fff;
+                font-size: 1.25rem;
+                margin-left: 5px;
+              }
+
+              &:hover {
+                background: #ff4081;
+              }
+            }
+          }
+        }
+      }
+
+      .pagination {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        transform: translateY(-50%);
+
+        .revealButton {
+          background: #195f80;
+          color: #fff;
+          border: none;
+          padding: 0.5rem 1rem;
+          border-radius: 30%;
+          cursor: pointer;
+          transition: background 0.3s;
+          font-size: 1.5rem;
+
+          &:disabled {
+            background: #ddd;
+            cursor: not-allowed;
+          }
+
+          &:hover {
+            background: #ff4081;
+          }
+
+          &.left {
+            margin-left: 1rem;
+          }
+
+          &.right {
+            margin-right: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
