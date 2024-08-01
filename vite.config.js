@@ -1,8 +1,8 @@
-import { defineConfig } from 'vite';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
+// https://vitejs.dev/config/
 export default defineConfig({
-  root: '.', // Set the root directory where your index.html is located
-  build: {
-    outDir: 'dist', // Output directory for the build
-  },
-});
+  base:"/travel_app_projet/",
+  plugins: [react()],
+})
