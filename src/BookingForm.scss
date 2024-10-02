@@ -1,0 +1,139 @@
+.booking-forms {
+  padding: 8rem 6rem;
+
+  // BookingForm.scss
+.booking-form-content {
+  background: #fff; // Match background of the Body
+  padding: 20px; // Padding similar to the Body
+  border-radius: 8px; // Rounded corners
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); // Shadow for depth
+  max-width: 600px; // Limit width to maintain consistency
+  margin: auto; // Center the form horizontally
+}
+// MainComponent.scss or BookingForm.scss
+.booking-form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); // Semi-transparent background
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; // Ensure it appears above other content
+}
+
+
+.close-button {
+  margin-bottom: 20px; // Space below the button
+  padding: 10px 15px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #c0392b;
+  }
+}
+
+  
+
+  .secContainer {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+
+    .secInfo {
+      text-align: center;
+      margin-bottom: 3rem;
+
+      .secTitle {
+        font-size: 2.5rem;
+        color: #195f80;
+        font-family: 'Source Serif Pro', serif;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+        color: #555;
+        line-height: 1.6;
+      }
+    }
+
+    .mainContent {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 3rem;
+
+      .formStep {
+        flex: 1;
+        min-width: 300px;
+        padding: 2rem;
+        background-color: #ffffff;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        max-width: 500px;
+
+        .formGroup {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+
+          label {
+            font-size: 1.1rem;
+            color: #195f80;
+            font-weight: bold;
+          }
+
+          input,
+          select,
+          textarea {
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+            background: #f5f7fa;
+
+            &:focus {
+              border-color: #ff4081;
+              outline: none;
+              background: #ffffff;
+              box-shadow: 0 0 5px #ff4081;
+            }
+          }
+        }
+
+        .btn {
+          align-self: center;
+          padding: 0.75rem 1.5rem;
+          border: none;
+          background-color: #195f80;
+          color: #fff;
+          width: auto;
+          font-size: 1.2rem;
+          font-weight: bold;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s, transform 0.3s;
+
+          &:hover {
+            background-color: #ff4081;
+            transform: translateY(-2px);
+          }
+
+          &:active {
+            transform: translateY(1px);
+          }
+        }
+      }
+    }
+  }
+}

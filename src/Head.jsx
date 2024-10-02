@@ -1,12 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types'; // Import PropTypes for prop validation
+import PropTypes from 'prop-types';
 import './header_css.css';
 import logo from './image/logo.png';
 import { faBars, faTimes, faUser, faCog, faCalendarCheck, faCloud, faStar, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import AuthModal from './AuthModal';
 
-function Head({ isModalOpen, openLoginModal, closeModal, user, onLogin, onSignOut, showWeatherSearch }) {
+function Head({ isModalOpen, openLoginModal, closeModal, user, onLogin, onSignOut, showWeatherSearch, showSavedFavorites }) {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = React.useState(false);
 
@@ -40,11 +40,11 @@ function Head({ isModalOpen, openLoginModal, closeModal, user, onLogin, onSignOu
                     {user.username}
                   </a>
                   <ul className={`dropdown-menu ${isDropdownOpen ? 'show' : 'hidden'}`}>
-                    <li><a href="#!" onClick={() => window.location.href = '/manage-account'}><FontAwesomeIcon icon={faCog} /> Manage Account</a></li>
-                    <li><a href="#!" onClick={() => window.location.href = '/booking-trip'}><FontAwesomeIcon icon={faCalendarCheck} /> Booking and Trip</a></li>
-                    <li><a href="#!" onClick={showWeatherSearch}><FontAwesomeIcon icon={faCloud} /> Weather Review</a></li>
-                    <li><a href="#!" onClick={() => window.location.href = '/saved'}><FontAwesomeIcon icon={faStar} /> Saved</a></li>
-                    <li><a href="#!" onClick={onSignOut}><FontAwesomeIcon icon={faSignOutAlt} /> Sign Out</a></li>
+                    <li key="manage-account"><a href="#!" onClick={() => window.location.href = '/manage-account'}><FontAwesomeIcon icon={faCog} /> Manage Account</a></li>
+                    <li key="booking-trip"><a href="#!" onClick={() => window.location.href = '/booking-trip'}><FontAwesomeIcon icon={faCalendarCheck} /> Booking and Trip</a></li>
+                    <li key="weather-review"><a href="#!" onClick={showWeatherSearch}><FontAwesomeIcon icon={faCloud} /> Weather Review</a></li>
+                    <li key="saved"><a href="#!" onClick={showSavedFavorites}><FontAwesomeIcon icon={faStar} /> Saved</a></li>
+                    <li key="sign-out"><a href="#!" onClick={onSignOut}><FontAwesomeIcon icon={faSignOutAlt} /> Sign Out</a></li>
                   </ul>
                 </li>
               ) : (
@@ -72,6 +72,7 @@ Head.propTypes = {
   onLogin: PropTypes.func.isRequired,
   onSignOut: PropTypes.func.isRequired,
   showWeatherSearch: PropTypes.func.isRequired,
+  showSavedFavorites: PropTypes.func.isRequired, // Add this line
 };
 
 export default Head;

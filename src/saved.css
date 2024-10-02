@@ -1,0 +1,98 @@
+.saved-favorites-overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay background */
+  position: fixed; /* Position it fixed for overlay effect */
+  top: 0; /* Align the overlay to the top */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex; /* Use flexbox for centering */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it overlays other content */
+}
+
+img{
+  height: 200px;
+  width: 100px;
+}
+.favorite-item {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+  margin-bottom: 15px; /* Add space between items */
+}
+
+.favorite-image {
+  max-width: 100px; /* Set a max width for the image */
+  height: 100px; /* Maintain aspect ratio */
+  margin-right: 15px; /* Space between image and text */
+}
+
+.favorite-details {
+  display: flex;
+  flex-direction: column; /* Stack text paragraphs vertically */
+}
+
+.saved-favorites-content {
+  background-color: #f9f9f9; /* Background color */
+  border: 1px solid #ddd; /* Border color */
+  border-radius: 5px; /* Border radius for buttons and containers */
+  padding: 40px 20px; /* Add padding for content */
+  max-width: 600px; /* Maximum width of the content */
+  width: 90%; /* Allow content to take up to 90% of the viewport width */
+  max-height: 80vh; /* Maximum height to keep the content manageable */
+  overflow-y: auto; /* Allow vertical scrolling if the content exceeds the maximum height */
+  margin: 20px; /* Margin around the content */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative; /* Enable positioning for the button */
+}
+
+.saved-favorites-content .close-button {
+  position: absolute; /* Fix the button to the top-right */
+  top: 20px; 
+  right: 20px; 
+  padding: 10px 15px;
+  background-color: #ff4081; /* Button background color */
+  color: white;
+  border: none;
+  border-radius: 5px; /* Border radius for buttons and containers */
+  cursor: pointer;
+  transition: background-color 0.3s;
+  z-index: 10; /* Ensure the button is above other elements */
+}
+
+.saved-favorites-content .close-button:hover {
+  background-color: #f66797; /* Button hover background color */
+}
+
+.saved-favorites-content h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.saved-favorites-content ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; /* Remove default margin */
+}
+
+.saved-favorites-content ul li {
+  border-bottom: 1px solid #ddd; /* Border color */
+  padding: 15px 0;
+}
+
+.saved-favorites-content ul li p {
+  color: #333; /* Text color */
+  text-align: center;
+  margin: 5px 0;
+}
+
+.saved-favorites-content ul li p:first-child {
+  font-weight: bold; /* Make the first child (city) bold */
+}
+
+/* Additional styles for empty state message */
+.saved-favorites-content p.no-favorites {
+  text-align: center;
+  color: #333; /* Text color */
+  margin-top: 20px;
+}

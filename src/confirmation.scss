@@ -1,0 +1,60 @@
+.confirmation {
+  padding: 3rem; // Padding around the confirmation section
+  background-color: #ffffff; // White background for the confirmation box
+  border-radius: 10px; // Rounded corners
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); // Soft shadow for depth
+  max-width: 600px; // Maximum width for the confirmation box
+  margin: 2rem auto; // Center the confirmation box with margin on top and bottom
+
+  h2 {
+    font-size: 2rem; // Title font size
+    color: #195f80; // Color for the title
+    text-align: center; // Center the title
+    margin-bottom: 1.5rem; // Space below the title
+  }
+
+  p {
+    font-size: 1.2rem; // Font size for the description
+    color: #555; // Dark gray color for the text
+    margin-bottom: 2rem; // Space below the paragraph
+    text-align: center; // Center the text
+  }
+
+  ul {
+    list-style: none; // Remove default list style
+    padding: 0; // Remove default padding
+
+    li {
+      font-size: 1.1rem; // Font size for list items
+      color: #333; // Darker text color for better readability
+      margin-bottom: 1rem; // Space between list items
+
+      strong {
+        color: #195f80; // Color for strong text
+      }
+    }
+  }
+  
+
+  button {
+    display: inline-block; // Keep buttons inline
+    padding: 0.75rem 1.5rem; // Padding inside buttons
+    margin: 1rem 0.5rem; // Margin for spacing between buttons
+    border: none; // Remove border
+    border-radius: 5px; // Rounded corners
+    background-color: #195f80; // Button background color
+    color: #fff; // Button text color
+    font-size: 1.1rem; // Font size for buttons
+    cursor: pointer; // Pointer cursor on hover
+    transition: background-color 0.3s, transform 0.3s; // Smooth transition for hover effects
+
+    &:hover {
+      background-color: #ff4081; // Change background on hover
+      transform: translateY(-2px); // Slight lift effect
+    }
+
+    &:active {
+      transform: translateY(1px); // Slight push effect when clicked
+    }
+  }
+}

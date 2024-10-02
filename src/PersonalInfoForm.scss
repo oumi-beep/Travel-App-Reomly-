@@ -1,0 +1,63 @@
+.personal-info-form {
+  padding: 3rem;
+  background-color: #ffffff; // White background for the form
+  border-radius: 10px; // Rounded corners
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); // Subtle shadow for depth
+  max-width: 600px; // Maximum width of the form
+  margin: 2rem auto; // Center the form with margin on top and bottom
+
+  h2 {
+    font-size: 2rem; // Title font size
+    color: #195f80; // Color for the title
+    text-align: center; // Center the title
+    margin-bottom: 1.5rem; // Space below the title
+  }
+  
+  label {
+    display: block; // Each label takes the full width
+    margin-bottom: 1rem; // Space between labels
+    font-size: 1rem; // Font size for labels
+    color: #555; // Dark gray color for labels
+
+    // Style for inputs
+    input {
+      display: block; // Make each input block-level to stack vertically
+      width: 100%; // Full width for input fields
+      padding: 0.75rem; // Padding inside input
+      border: 1px solid #ccc; // Light gray border
+      border-radius: 5px; // Rounded corners
+      font-size: 1rem; // Font size for input
+      transition: border-color 0.3s, background-color 0.3s; // Smooth transition for input focus
+      background: #f9f9f9; // Light background for inputs
+
+      &:focus {
+        border-color: #ff4081; // Change border color on focus
+        outline: none; // Remove default outline
+        background: #ffffff; // White background on focus
+        box-shadow: 0 0 5px rgba(255, 64, 129, 0.5); // Soft shadow on focus
+      }
+    }
+  }
+
+  button {
+    display: block; // Make button block level
+    padding: 0.75rem 1.5rem; // Padding inside button
+    margin: 2rem auto 0; // Center button and add margin above
+    border: none; // Remove border
+    border-radius: 5px; // Rounded corners
+    background-color: #195f80; // Button background color
+    color: #fff; // Button text color
+    font-size: 1.1rem; // Font size for button
+    cursor: pointer; // Pointer cursor on hover
+    transition: background-color 0.3s, transform 0.3s; // Smooth transition for hover effects
+
+    &:hover {
+      background-color: #ff4081; // Change background on hover
+      transform: translateY(-2px); // Slight lift effect
+    }
+
+    &:active {
+      transform: translateY(1px); // Slight push effect when clicked
+    }
+  }
+}

@@ -1,4 +1,5 @@
 import  { useState } from "react";
+import axios from 'axios';
 import "./body_css.css";
 import video from "./image/video.mp4";
 import { GrLocation } from "react-icons/gr";
@@ -25,16 +26,17 @@ const offers = [
   { id: 6, imgSrc: img6, city: "Desert Oasis", price: '280€', discount: '18% Off', status: 'For Rent', amenities: [{ icon: <MdKingBed className="icon" />, label: 'Beds' }, { icon: <MdBathtub className="icon" />, label: 'Bath' }, { icon: <FaWifi className="icon" />, label: 'Wi-fi' }, { icon: <MdLocalParking className="icon" />, label: 'Parking' }], location: '450 Vine #120, Desert Oasis' },
   { id: 7, imgSrc: img7, city: "Fez", price: '360€', discount: '12% Off', status: 'For Rent', amenities: [{ icon: <MdKingBed className="icon" />, label: 'Beds' }, { icon: <MdBathtub className="icon" />, label: 'Bath' }, { icon: <FaWifi className="icon" />, label: 'Wi-fi' }, { icon: <MdPool className="icon" />, label: 'Pool' }, { icon: <MdLocalParking className="icon" />, label: 'Parking' }], location: '450 Vine #120, Fez' },
   { id: 8, imgSrc: img8, city: "Tangier", price: '340€', discount: '22% Off', status: 'For Rent', amenities: [{ icon: <MdKingBed className="icon" />, label: 'Beds' }, { icon: <MdBathtub className="icon" />, label: 'Bath' }, { icon: <FaWifi className="icon" />, label: 'Wi-fi' }, { icon: <MdLocalParking className="icon" />, label: 'Parking' }], location: '450 Vine #120, Tangier' },
-  { id: 9, imgSrc: img9, city: "Essaouira", price: '390€', discount: '17% Off', status: 'For Rent', amenities: [{ icon: <MdKingBed className="icon" />, label: 'Beds' }, { icon: <MdBathtub className="icon" />, label: 'Bath' }, { icon: <FaWifi className="icon" />, label: 'Wi-fi' }, { icon: <MdLocalParking className="icon" />, label: 'Parking' }], location: '450 Vine #120, Essaouira' }
-];
+  { id: 9, imgSrc: img9, city: "Essaouira", price: '390€', discount: '17% Off', status: 'For Rent', amenities: [{ icon: <MdKingBed className="icon" />, label: 'Beds' }, { icon: <MdBathtub className="icon" />, label: 'Bath' }, { icon: <FaWifi className="icon" />, label: 'Wi-fi' }, { icon: <MdLocalParking className="icon" />, label: 'Parking' }], location: '450 Vine #120, Essaouira' },
+  { id: 10, imgSrc: img8, city: "Essaouira", price: '30€', discount: '50% Off', status: 'For Rent', amenities: [{ icon: <MdKingBed className="icon" />, label: 'Beds' }, { icon: <MdBathtub className="icon" />, label: 'Bath' }, { icon: <FaWifi className="icon" />, label: 'Wi-fi' }, { icon: <MdLocalParking className="icon" />, label: 'Parking' }], location: '450 Vine #120, Essaouira' }
 
-function Body() {
+];
+const Body = ({ onBooking }) => {
   const [destination, setDestination] = useState("");
   const [date, setDate] = useState("");
   const [price, setPrice] = useState(5000);
   const [searchResults, setSearchResults] = useState([]);
   const [showResults, setShowResults] = useState(false);
-
+  const results = []; 
   const cities = Array.from(new Set(offers.map(offer => offer.city)));
 
   const handleSearch = () => {
@@ -51,6 +53,26 @@ function Body() {
     setShowResults(false);
   };
 
+  const onAddToFavorite = (offer) => {
+    const existingFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    const isFavorite = existingFavorites.some(favorite => favorite.id === offer.id);
+
+    if (!isFavorite) {
+      existingFavorites.push(offer);
+      localStorage.setItem('favorites', JSON.stringify(existingFavorites));
+      alert(`Offer ${offer.id} in ${offer.city} has been added to your favorites!`);
+      // Send the favorite to the backend to save it in MongoDB (if applicable)
+    } else {
+      alert(`Offer ${offer.id} in ${offer.city} is already in your favorites!`);
+    }
+  };
+
+  const handleAddToFavorite = (offer) => {
+    onAddToFavorite(offer);
+  };
+
+  
+
   return (
     <>
       <div className="body-container">
@@ -64,7 +86,9 @@ function Body() {
             <h1 className="homeTitle">Search your Holiday.</h1>
           </div>
           <div className="cardDiv">
+            {/* Input Fields */}
             <div className="inputFields">
+              {/* Existing input fields */}
               <div className="destinationInput">
                 <label htmlFor="city">Search your destination</label>
                 <div className="Input">
@@ -145,8 +169,8 @@ function Body() {
                   </div>
                   <p className="location">Location: {result.location}</p>
                   <div className="result-actions">
-                    <button className="favorite-button">Add to Favorite</button>
-                    <button className="booking-button">Booking</button>
+                    <button className="favorite-button" onClick={() => handleAddToFavorite(result)}>Add to Favorite</button>
+                    <button className="booking-button" onClick={() => onBooking(result)}>Booking</button>
                   </div>
                 </div>
               </div>
@@ -154,6 +178,8 @@ function Body() {
           )}
         </div>
       )}
+
+    
     </>
   );
 }
